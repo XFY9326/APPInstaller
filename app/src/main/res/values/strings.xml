@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">应用安装程序</string>
+    <string name="install_content_question">是否要安装此应用？</string>
+    <string name="install_content_permission">该应用会申请以下权限：</string>
+    <string name="install_now_version">当前版本：</string>
+    <string name="install_installed_version">已安装版本：</string>
+    <string name="install_loading">正在安装··· ···</string>
+    <string name="install_success">安装成功！</string>
+    <string name="install_failed">安装失败！</string>
+    <string name="permission_error">权限请求出错！</string>
+    <string name="root_error">无Root权限！</string>
+    <string name="donate">捐赠</string>
+    <string name="complete">完成</string>
+    <string name="open">打开</string>
+</resources>
