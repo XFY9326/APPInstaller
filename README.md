@@ -1,0 +1,2 @@
+# APPInstaller
+通过Root在安卓设备上代替系统安装程序安装应用
