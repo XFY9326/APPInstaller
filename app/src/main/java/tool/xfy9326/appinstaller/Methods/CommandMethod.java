@@ -27,6 +27,7 @@ public class CommandMethod {
         Process process = Runtime.getRuntime().exec("su");
         BufferedWriter mOutputWriter = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
         BufferedReader mInputReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        BufferedReader mErrorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
         mOutputWriter.write(cmd + "\n");
         mOutputWriter.flush();
         mOutputWriter.write("exit\n");
@@ -35,6 +36,9 @@ public class CommandMethod {
         String line;
         StringBuilder result = new StringBuilder();
         while ((line = mInputReader.readLine()) != null) {
+            result.append(line).append("\n");
+        }
+        while ((line = mErrorReader.readLine()) != null) {
             result.append(line).append("\n");
         }
         mOutputWriter.close();
